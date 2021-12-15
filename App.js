@@ -1,12 +1,12 @@
-const word = document.getElementById("word");
-const wrongLetter = document.getElementById("wrong-letters");
-const playAgain = document.getElementById("play-button");
-const popup = document.getElementById("popup-container");
+const word = document.querySelector("#word");
+const wrongLetter = document.querySelector("#wrong-letters");
+const playAgain = document.querySelector("#play-button");
+const popup = document.querySelector("#popup-container");
 const notification = document.getElementById("notification-container");
 const finalMessage = document.getElementById("final-message");
 const figureParts = document.querySelectorAll(".figure-part");
 
-const words = ["application", "programming", "interface", "wizard"];
+const words = ["clarusway", "javascript", "interface", "react"];
 
 let selectedWord = words[Math.floor(Math.random() * words.length)]; //random word
 
@@ -37,12 +37,12 @@ function updateWrongLetters() {
   ${wrongLetters.map((letter) => `<span>${letter}</span>`)}
   `;
 
-  figureParts.forEach((part, index) => {
+  figureParts.forEach((bodyPart, index) => {
     const errors = wrongLetters.length;
     if (index < errors) {
-      part.style.display = "block";
+      bodyPart.style.display = "block";
     } else {
-      part.style.display = "none";
+      bodyPart.style.display = "none";
     }
   });
   if (wrongLetters.length === figureParts.length) {
