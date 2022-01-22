@@ -25,6 +25,7 @@ ${selectedWord
   )
   .join("")}`;
   const innerWord = word.innerText.replace(/\n/g, "");
+
   if (innerWord === selectedWord) {
     finalMessage.innerText = "Congratulations! You Won :)";
     popup.style.display = "flex";
@@ -59,6 +60,7 @@ function showNotification() {
 window.addEventListener("keydown", (e) => {
   if (e.keyCode >= 65 && e.keyCode <= 222) {
     const letter = e.key;
+
     if (selectedWord.includes(letter)) {
       if (!correctLetters.includes(letter)) {
         correctLetters.push(letter);
