@@ -1,4 +1,4 @@
-For see plese click here https://hang-manjs.netlify.app/
+For see please click here https://hang-manjs.netlify.app/
   
 
 
